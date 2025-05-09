@@ -8,7 +8,7 @@ CREATE TABLE doctor (
 
 CREATE TABLE consultorio (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    numero VARCHAR(10) NOT NULL,
+    numero VARCHAR(16) NOT NULL,
     piso INT NOT NULL
 );
 
