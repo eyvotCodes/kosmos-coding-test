@@ -81,3 +81,10 @@ classDiagram
     Consultorio "1" <-- "many" Cita
     
 ~~~
+
+### Consideraciones
+
+Se usó H2 como base de datos. Dado que H2 es una base de datos en memoria, resulta muy práctica
+para este tipo de pruebas: los revisores no tienen que hacer ningún setup adicional, permitiendo
+el uso de SQL convencional (tal y como se ve en los archivos `schema.sql` y `data.sql`). A demás
+se puede interactuar directamente con la consola en el path `localhost:8080/h2-console`.
