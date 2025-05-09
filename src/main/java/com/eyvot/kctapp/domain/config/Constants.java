@@ -1,4 +1,4 @@
-package com.eyvot.kctapp.config;
+package com.eyvot.kctapp.domain.config;
 
 public class Constants {
 

@@ -1,6 +1,6 @@
 package com.eyvot.kctapp.model;
 
-import com.eyvot.kctapp.config.Constants;
+import com.eyvot.kctapp.domain.config.Constants;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

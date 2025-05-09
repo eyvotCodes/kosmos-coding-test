@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kosmos Coding Test</title>
+    </head>
+
+    <body>
+        <h1>Kosmos Coding Test</h1>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Horario</th>
+                    <th>Doctor</th>
+                    <th>Consultorio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="cita : ${citas}">
+                    <td th:text="${cita.nombrePaciente}">Paciente</td>
+                    <td th:text="${#temporals.format(cita.horarioInicio, 'yyyy-MM-dd HH:mm')} + ' - ' + ${#temporals.format(cita.horarioFin, 'HH:mm')}">Horario</td>
+                    <td th:text="${cita.doctor.nombre + ' ' + cita.doctor.apellidoPaterno}">Doctor</td>
+                    <td th:text="'Piso ' + ${cita.consultorio.piso} + ' #' + ${cita.consultorio.numero}">Consultorio</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
