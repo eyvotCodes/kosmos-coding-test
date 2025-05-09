@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kosmos Coding Test</title>
+    </head>
+    <body>
+        <h1>Agendar Cita</h1>
+
+        <div th:if="${error}" style="color: red;" th:text="${error}"></div>
+
+        <form th:action="@{/citas}" th:object="${cita}" method="post">
+            <label>Paciente:</label>
+            <input type="text" th:field="*{nombrePaciente}" required /><br>
+
+            <label>Horario Inicio:</label>
+            <input type="datetime-local" th:field="*{horarioInicio}" required /><br>
+
+            <label>Horario Fin:</label>
+            <input type="datetime-local" th:field="*{horarioFin}" required /><br>
+
+            <label>Doctor:</label>
+            <select th:field="*{doctor}" required>
+                <option th:each="doc : ${doctores}" th:value="${doc.id}" th:text="${doc.nombre + ' ' + doc.apellidoPaterno}"></option>
+            </select><br>
+
+            <label>Consultorio:</label>
+            <select th:field="*{consultorio}" required>
+                <option th:each="con : ${consultorios}" th:value="${con.id}" th:text="${con.numero + ' - Piso ' + con.piso}"></option>
+            </select><br>
+
+            <button type="submit">Guardar</button>
+        </form>
+
+        <a href="/">← Volver al listado</a>
+    </body>
+</html>

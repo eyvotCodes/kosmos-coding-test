@@ -40,8 +40,9 @@ public class Doctor {
 
     public Doctor() {}
 
-    public Doctor(String nombre, String apellidoPaterno, String apellidoMaterno, String especialidad,
-                  List<Cita> citas) {
+    public Doctor(Integer id, String nombre, String apellidoPaterno, String apellidoMaterno,
+                  String especialidad, List<Cita> citas) {
+        this.id = id;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
         this.apellidoMaterno = apellidoMaterno;
@@ -49,6 +50,14 @@ public class Doctor {
         this.citas = citas;
     }
 
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNombre() {
         return nombre;
