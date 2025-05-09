@@ -88,3 +88,8 @@ Se usó H2 como base de datos. Dado que H2 es una base de datos en memoria, resu
 para este tipo de pruebas: los revisores no tienen que hacer ningún setup adicional, permitiendo
 el uso de SQL convencional (tal y como se ve en los archivos `schema.sql` y `data.sql`). A demás
 se puede interactuar directamente con la consola en el path `localhost:8080/h2-console`.
+
+No se alcanzó a aplicar estilos CSS dado que se priorizó la funcionalidad, el orden (o forma de
+proceder) que se tenía contemplado es el siguiente: `requisitos funcionales -> pruebas automatizadas
+-> maquetado y estilos`. Las funcionalidades realizadas fueron: pantalla de listado de citas y
+pantalla de registro de nueva cita.
